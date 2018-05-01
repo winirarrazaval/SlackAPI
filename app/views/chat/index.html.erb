@@ -4,7 +4,8 @@
     <ul>
       <% @channels.each do |channel| %>
         <li>
-          <%= channel["name"] %>
+          <%= link_to channel.name, new_message_path(channel.name) %>
+          <%# this channel.name is a factory method calling our from api%>
         </li>
       <% end %>
     </ul>
