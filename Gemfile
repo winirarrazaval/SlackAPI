@@ -77,6 +77,11 @@ group :development do
   gem 'binding_of_caller'
 end
 
+group :development, :test do
+  gem 'minitest-vcr'
+  gem 'webmock'
+end
+
 group :test do
   gem 'minitest-rails'
   gem 'minitest-reporters'
