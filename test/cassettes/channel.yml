@@ -1,0 +1,137 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://slack.com/api/chat.postMessage?channel=test-api-channel&text=test%20message&token=<SLACK_TOKEN>
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '60'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 02 May 2018 18:39:25 GMT
+      Server:
+      - Apache
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Oauth-Scopes:
+      - read,client,admin,identify,post,apps
+      Pragma:
+      - no-cache
+      X-Accepted-Oauth-Scopes:
+      - chat:write:bot,post
+      X-Xss-Protection:
+      - '0'
+      X-Slack-Req-Id:
+      - d06dbebc-7a3e-491e-9ab7-62239e8498a6
+      X-Slack-Backend:
+      - h
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Via:
+      - haproxy-www-rju6
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7a06af51e583997d8673ab89482dd45a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 7ZKD2O1YyD0tkuQxPaInF1KrystVqAkjfu-tHB2PXr_9_VD91TgKzA==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":false,"error":"channel_not_found"}'
+    http_version: 
+  recorded_at: Wed, 02 May 2018 18:39:25 GMT
+- request:
+    method: post
+    uri: https://slack.com/api/chat.postMessage?channel=this-channel-does-not-exist&text=test%20message&token=<SLACK_TOKEN>
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '60'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 02 May 2018 18:39:25 GMT
+      Server:
+      - Apache
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Oauth-Scopes:
+      - read,client,admin,identify,post,apps
+      Pragma:
+      - no-cache
+      X-Accepted-Oauth-Scopes:
+      - chat:write:bot,post
+      X-Xss-Protection:
+      - '0'
+      X-Slack-Req-Id:
+      - bef3a1d8-6a13-4b8e-affa-18a7cb0daf50
+      X-Slack-Backend:
+      - h
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Via:
+      - haproxy-www-iila
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 56908f89e8d17ba579c0607313114955.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - X6b4BbNlfmj2K2G6q-yXPVQszOoTPvcMVwlEKt5t1FueAhBjVQvccA==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":false,"error":"channel_not_found"}'
+    http_version: 
+  recorded_at: Wed, 02 May 2018 18:39:25 GMT
+recorded_with: VCR 4.0.0

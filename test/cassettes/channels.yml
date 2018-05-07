@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://slack.com/api/channels.list?token=<SLACK_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '473'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 02 May 2018 17:46:08 GMT
+      Server:
+      - Apache
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Oauth-Scopes:
+      - read,client,admin,identify,post,apps
+      Pragma:
+      - no-cache
+      X-Accepted-Oauth-Scopes:
+      - channels:read,read
+      X-Xss-Protection:
+      - '0'
+      X-Slack-Req-Id:
+      - c1572c5b-d481-4d73-a768-a56e12f8734f
+      X-Slack-Backend:
+      - h
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Via:
+      - haproxy-www-9dy9
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7e587c722adb25336835ccb4e5814e4e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - NPtPzp3TB1mXSVQrT_HoPmJS4kZeUgAluVpAAWtbrywPT_SOdATu7A==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true,"channels":[{"id":"C93NXTHLY","name":"general","is_channel":true,"created":1517896229,"is_archived":false,"is_general":true,"unlinked":0,"creator":"U93NXTEGY","name_normalized":"general","is_shared":false,"is_org_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"members":["U93NXTEGY"],"topic":{"value":"Company-wide
+        announcements and work-based matters","creator":"U93NXTEGY","last_set":1517896229},"purpose":{"value":"This
+        channel is for workspace-wide communication and announcements. All members
+        are in this channel.","creator":"U93NXTEGY","last_set":1517896229},"previous_names":[],"num_members":1},{"id":"C94G6CSBF","name":"random","is_channel":true,"created":1517896229,"is_archived":false,"is_general":false,"unlinked":0,"creator":"U93NXTEGY","name_normalized":"random","is_shared":false,"is_org_shared":false,"is_member":true,"is_private":false,"is_mpim":false,"members":["U93NXTEGY"],"topic":{"value":"Non-work
+        banter and water cooler conversation","creator":"U93NXTEGY","last_set":1517896229},"purpose":{"value":"A
+        place for non-work-related flimflam, faffing, hodge-podge or jibber-jabber
+        you''d prefer to keep out of more focused work-related channels.","creator":"U93NXTEGY","last_set":1517896229},"previous_names":[],"num_members":1}]}'
+    http_version: 
+  recorded_at: Wed, 02 May 2018 17:46:08 GMT
+recorded_with: VCR 4.0.0

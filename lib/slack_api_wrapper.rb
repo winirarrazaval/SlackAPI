@@ -2,6 +2,8 @@ require 'httparty'
 require "pry"
 
 class SlackApiWrapper
+  class SlackError < StandardError; end
+  #people define error and then we use it a s Slack
   # Your code here!
   def self.list_channels
     token = ENV["SLACK_TOKEN"]
@@ -9,7 +11,7 @@ class SlackApiWrapper
     response = HTTParty.get(url)
 
     unless response["ok"]
-      raise StandarError.new(response["error"])
+      raise StandardError.new(response["error"])
     end
 
     return response["channels"].map do |raw_channel|
@@ -30,9 +32,8 @@ class SlackApiWrapper
     response = HTTParty.post(full_url)
 
     unless response["ok"]
-      raise StandarError.new(response["error"])
+      raise SlackError.new(response["error"])
 
     end
   end
-
 end
